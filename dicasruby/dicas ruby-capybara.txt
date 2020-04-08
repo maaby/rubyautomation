@@ -1,0 +1,68 @@
+-------------- NOTEPAD AUXILIO ------------------
+
+------ Site com comandos --------
+https://medium.com/@reiload_88128/estudando-os-comandos-do-capybara-ruby-f0f5152847f7
+
+
+----- Formas de mapear elementos ----------------
+element :gatend, :link,             "GATEND", match: :first
+element :newUsers,                  "input[value='Novo usuário']", match: :first
+element :setupContent,              ".setupcontent"
+element :pesquisarPor,              "#sharing_search"
+element :txtValidaCadastroUsuario,  "h2[class='pageDescription']"
+element :salvar, :xpath,            "(//input[@title='Salvar'])[2]"
+element :editarGrp, :xpath,         "//input[@title='Editar']"
+element :cep, :xpath, 		    "(//label[contains(.,'CEP')])[1]/following-sibling::input"
+
+ORDEM CRONOLOGICA DE MAPEAMENTO
+ID
+NAME
+TITLE
+CLASS
+HREF
+TAG
+XPATH
+
+----------------------------
+byebug
+
+find(:xpath, "//input[@title='Editar']").click
+find("input[@title='Editar']").click
+find("#teste").click
+find(".teste.classtes").click
+find("#teste").set('teste')
+find("#teste").send_keys :ENTER
+
+
+----- comando de teclado ----------
+ELEMENTOVAIAQUI.send_keys :enter
+
+----- comando de escrever ---------
+ELEMENTOVAIAQUI.set('Apelido Automação')
+
+-------- comandos de click--------
+ELEMENTO.click()
+page.execute_script("arguments[0].click();", ELEMENTOVAIAQUI)
+
+----- COMANDO PARA PRINTAR NA TELA ------
+puts "textooooooooo  #{ELEMENTOVAIAQUI}"
+
+----- TEMPO ESPERA -----
+sleep(2)
+
+--- COMANDO PARA VERIFICAR SE O ELEMENTO ESTE VISIVEL OU INVISIVEL NA TELA (WAIT )----
+wait_until_ELEMENTOVAIAQUI_visible(wait:10)
+wait_until_ELEMENTOVAIAQUI_invisible(wait:10)
+
+----- Metodo para pegar o texto do elemento ---
+
+def verificaTxt()
+   wait_until_ELEMENTOVAIAQUI_visible(wait:30)
+   msg = ELEMENTOVAIAQUI.text()
+   msg
+end
+
+----- VALIDANDO E COMPARANDO UM TEXTO PEGADO DO ELEMENTO ----
+
+expect(@bp.verificaTxt()).to eq("Blusa adicionada com sucesso")
+expect(page).to have_title "......"

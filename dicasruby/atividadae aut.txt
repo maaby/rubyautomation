@@ -1,0 +1,27 @@
+TRANSFORME OS CENÁRIOS ABAIXO EM BDD E EXECUTE
+
+url site: http://automationpractice.com/
+Pré-Requisito: Realizar o login como contexto antes de qualquer ação.
+
+casos de testes:
+
+CT000 - BDD DE LOGIN
+CT001 - Adicionar um vestido ao carrinho e finalizar a compra
+CT002 - Adicionar 3 itens ao carrinho e excluir 1 deles e finalizar a compra
+CT003 - Enviar um email de contato para o fornecedor
+
+email: maabymandira@gmail.com
+senha: 123456
+
+--------------------------------------------------------------------------------
+
+TRANSFORME OS CENÁRIOS ABAIXO EM BDD E EXECUTE
+
+url site: https://www.globo.com/
+
+CT001 - Entrar na página do santos e buscar pela noticia "Free Fire alavanca Santos um ano após retorno do clube aos eSports" e acessar ela.
+CT002 - Entrar no g1 e buscar pela noticia "Revista científica cita Bolsonaro como mau exemplo de combate à doença" e acessar ela
+
+
+
+
